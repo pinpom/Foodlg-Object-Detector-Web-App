@@ -1,1 +1,1 @@
-{"Darknet V1.0 and Xception 231 V1.0":{"endpoint":"http://localhost:5000","groups":"","desc":"default model"}}
+{"Singapore Local Food - FC231":{"endpoint":"http://localhost:5000","groups":"","desc":""},"Singapore Local Food - FC5Healthy":{"endpoint":"http://localhost:5002","groups":"","desc":""},"Western Food - FC101":{"endpoint":"http://ncrs.d2.comp.nus.edu.sg:40111","groups":"","desc":""},"Japanese Food - UEC256":{"endpoint":"http://localhost:5007","groups":"","desc":""}}

@@ -40,12 +40,12 @@ app.use(session({
 }));
 
 const oidc = new ExpressOIDC({
-  issuer: 'https://dev-145826.okta.com/oauth2/default',
-  client_id: '0oa21wafmPNbZLDpa4x6',
-  client_secret: 'jJyWxsS8s8yXttXuU0MsPkxh13U8iJi_jreQmtR1',
-  appBaseUrl: 'http://ec2-52-77-215-17.ap-southeast-1.compute.amazonaws.com:8090',
-  redirect_uri: 'http://ec2-52-77-215-17.ap-southeast-1.compute.amazonaws.com:8090/authorization-code/callback',
-  scope: 'openid profile'
+  issuer: 'https://dev-175192.okta.com/oauth2/default',
+  client_id: '0oaktrsrxTJ188Kw04x6',
+  client_secret: '2Z70yC_Z6ccpNgfeskwvyjEUEYRlN4h96EHbfb6a',
+  appBaseUrl: 'http://ncrs.d2.comp.nus.edu.sg:8090',
+  redirect_uri: 'http://ncrs.d2.comp.nus.edu.sg:8090/authorization-code/callback',
+  scope: 'openid profile',
 });
 
 // ExpressOIDC will attach handlers for the /login and /authorization-code/callback routes
@@ -53,10 +53,10 @@ app.use(oidc.router);
 
 function getOktaApiParams(req, requestType, quota=-1) {
 	const userID = req.userContext.userinfo.sub;
-	const userURI = ('https://dev-145826.okta.com/api/v1/users/' + userID);
+	const userURI = ('https://dev-175192.okta.com/api/v1/users/' + userID);
 	const std_headers = {'Accept':'application/json',
 	                    'Content-Type': 'application/json',
-					    'Authorization': 'SSWS 000NZ7ilEQrvBP8xPtxSimrmp8aSumdAHnbAWZPi1l'
+					    'Authorization': 'SSWS 00RweVBDUZLYiW36LwewLuJhqo31DBM6JWv5XH4D4d'
 					   };
 	var params = {
 		    method: 'GET',
@@ -176,3 +176,4 @@ oidc.on('error', err => {
 console.log('Web App Started on Port ' + args.port);
 console.log('Using Model Endpoint: ' + args.model);
 console.log('Press Ctrl-C to stop...');
+
